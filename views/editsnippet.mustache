@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Snippet </title>
+  </head>
+  <body>
+    {{snip}}
+    <form action="/snips/create/snippet" method="post">
+      <label for="title"> Title </label>
+      <input type="text" name = "title" id = "title">
+
+      <label> Snippet goes in here </label>
+      <textarea rows = "40" cols="60" name="code" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"> </textarea>
+      <!-- <textarea rows = "10" cols="30" name="text" onkeydown="disableTabKey()"> </textarea> -->
+
+      <label for="notes"> Notes </label>
+      <textarea rows = "20" cols="60" name = "notes" id = "notes"></textarea>
+
+      <label for="language"> Language </label>
+      <input type="text" name = "language" id = "language">
+
+      <label for="tags"> Tags </label>
+      <input type="text" name = "tags" id = "tags">
+
+      <button type="submit"> Create </button>
+  </form>
+
+
+  </body>
+</html>
